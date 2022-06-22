@@ -121,79 +121,64 @@ buttons.addEventListener(
     }
     const id = e.target.id;
     console.log(id);
-    switchPlayers();
 
     if (id === 'ac') {
-      const total = +C.value + +A.value;
-      if (total >= 5) {
-        A.value = 5 - total;
-      } else {
-        A.value = total;
-      }
+      C.value = +C.value + +A.value;
     }
     if (id === 'ad') {
-      const total = +D.value + +A.value;
-      if (total >= 5) {
-        B.value = 5 - total;
-      } else {
-        B.value = total;
-      }
+      D.value = +D.value + +A.value;
     }
     if (id === 'bc') {
-      const total = +C.value + +B.value;
-      if (total >= 5) {
-        A.value = 5 - total;
-      } else {
-        A.value = total;
-      }
+      C.value = +C.value + +B.value;
     }
     if (id === 'bd') {
-      const total = +D.value + +B.value;
-      if (total >= 5) {
-        B.value = 5 - total;
-      } else {
-        B.value = total;
-      }
+      D.value = +D.value + +B.value;
     }
     if (id == 't13') {
-      C.value = 2;
-      D.value = 2;
+      A.value = 2;
+      B.value = 2;
     }
     if (id == 't22') {
-      C.value = 1;
-      D.value = 3;
+      A.value = 1;
+      B.value = 3;
     }
     if (id == 't14') {
-      C.value = 2;
-      D.value = 3;
+      A.value = 2;
+      B.value = 3;
     }
     if (id == 't23') {
-      C.value = 1;
-      D.value = 4;
+      A.value = 1;
+      B.value = 4;
     }
     if (id == 't24') {
-      C.value = 3;
-      D.value = 3;
+      A.value = 3;
+      B.value = 3;
     }
     if (id == 't33') {
-      C.value = 2;
-      D.value = 4;
+      A.value = 2;
+      B.value = 4;
     }
     if (id == 's02') {
-      C.value = 1;
-      D.value = 1;
+      A.value = 1;
+      B.value = 1;
     }
     if (id == 's03') {
-      C.value = 1;
-      D.value = 2;
+      A.value = 1;
+      B.value = 2;
     }
     if (id == 's04a') {
-      C.value = 2;
-      D.value = 2;
+      A.value = 2;
+      B.value = 2;
     }
     if (id == 's04b') {
-      C.value = 1;
-      D.value = 3;
+      A.value = 1;
+      B.value = 3;
+    }
+    if (+C.value >= 5) {
+      C.value = +C.value - 5;
+    }
+    if (+D.value >= 5) {
+      C.value = +D.value - 5;
     }
     if (A.value > B.value) {
       [A.value, B.value] = [B.value, A.value];
@@ -201,6 +186,7 @@ buttons.addEventListener(
     if (C.value > D.value) {
       [C.value, D.value] = [D.value, C.value];
     }
+    switchPlayers();
     console.log(+A.value, +B.value, +C.value, +D.value);
     if (A.value == 0 && B.value == 0) {
       document.querySelector('.game').classList.add('hidden');
