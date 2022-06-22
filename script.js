@@ -199,6 +199,7 @@ buttons.addEventListener(
     }
     const moves = possibleMoves(+A.value, +B.value, +C.value, +D.value);
     createButtonsForMoves(moves);
+    drawHands(+A.value, +B.value, +C.value, +D.value);
   })
 );
 
@@ -225,3 +226,15 @@ playAgainBtn.addEventListener('click', () => {
   console.log('hi pls reload page');
   location.reload();
 });
+
+const imgA = document.getElementById('imgA');
+const imgB = document.getElementById('imgB');
+const imgC = document.getElementById('imgC');
+const imgD = document.getElementById('imgD');
+
+const drawHands = (a, b, c, d) => {
+  imgA.src = `media/media/points-${a}-unselected.svg`;
+  imgB.src = `media/media/points-${b}-unselected.svg`;
+  imgC.src = `media/media/points-${c}-unselected.svg`;
+  imgD.src = `media/media/points-${d}-unselected.svg`;
+};
