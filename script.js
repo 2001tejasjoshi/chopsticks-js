@@ -178,7 +178,7 @@ buttons.addEventListener(
       C.value = +C.value - 5;
     }
     if (+D.value >= 5) {
-      C.value = +D.value - 5;
+      D.value = +D.value - 5;
     }
     if (A.value > B.value) {
       [A.value, B.value] = [B.value, A.value];
