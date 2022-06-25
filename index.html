@@ -18,9 +18,75 @@
     <div class="container">
       <h1>Chopsticks</h1>
       <div class="game">
-        <form>
+        <table>
+          <thead>
+            <tr>
+              <td>
+                <label id="leftSide">Player 1</label>
+              </td>
+              <td>
+                <label id="rightSide">Player 2</label>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div>
+                  <label for="scoreA">A</label>
+                  <input
+                    class="u-half-width"
+                    type="hidden"
+                    id="scoreA"
+                    value="1"
+                    disabled
+                  />
+                  <img id="imgA" src="media/media/points-1-unselected.svg" />
+                </div>
+              </td>
+              <td>
+                <div>
+                  <label for="scoreC">C</label>
+                  <input
+                    class="u-half-width"
+                    type="hidden"
+                    id="scoreC"
+                    value="1"
+                    disabled
+                  />
+                  <img id="imgC" src="media/media/points-1-unselected.svg" />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="scoreB">B</label>
+                <input
+                  class="u-half-width"
+                  type="hidden"
+                  id="scoreB"
+                  value="1"
+                  disabled
+                />
+                <img id="imgB" src="media/media/points-1-unselected.svg" />
+              </td>
+              <td>
+                <label for="scoreD">D</label>
+                <input
+                  class="u-half-width"
+                  type="hidden"
+                  id="scoreD"
+                  value="1"
+                  disabled
+                />
+                <img id="imgD" src="media/media/points-1-unselected.svg" />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <form>
           <div class="row">
-            <div class="six columns">
+            <div class="one column">
               <label id="leftSide">Player 1</label>
               <div>
                 <label for="scoreA">A</label>
@@ -45,7 +111,7 @@
                 <img id="imgB" src="media/media/points-1-unselected.svg" />
               </div>
             </div>
-            <div class="six columns">
+            <div class="one column">
               <label id="rightSide">Player 2</label>
               <div>
                 <label for="scoreC">C</label>
@@ -71,7 +137,7 @@
               </div>
             </div>
           </div>
-        </form>
+        </form> -->
         <div class="turn-indicator">
           <h3 style="color: green">
             It is Player <span id="turn">1</span>'s turn
