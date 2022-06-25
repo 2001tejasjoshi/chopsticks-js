@@ -72,7 +72,9 @@ const C = document.getElementById('scoreC');
 const D = document.getElementById('scoreD');
 const turn = document.getElementById('turn');
 const leftSide = document.getElementById('leftSide');
+const leftcol = document.getElementById('leftcol');
 const rightSide = document.getElementById('rightSide');
+const rightcol = document.getElementById('rightcol');
 
 // All Buttons
 
@@ -112,6 +114,11 @@ const buttonsArr = [
   t33Button,
 ];
 const playablemoves = possibleMoves(+A.value, +B.value, +C.value, +D.value);
+// leftSide.style.color = turn.innerText == '1' ? 'red' : 'green';
+leftcol.style.backgroundColor = turn.innerText == '1' ? '#77DD77' : '#ff6961';
+
+// rightSide.style.color = turn.innerText == '1' ? 'green' : 'red';
+rightcol.style.backgroundColor = turn.innerText == '1' ? '#ff6961' : '#77DD77';
 createButtonsForMoves(playablemoves);
 buttons.addEventListener(
   'click',
@@ -119,6 +126,15 @@ buttons.addEventListener(
     if (e.target.nodeName !== 'BUTTON') {
       return;
     }
+    console.log(turn.parentElement);
+    turn.parentElement.style.color =
+      turn.innerText == '1' ? '#ff6961' : '#77DD77';
+    leftcol.style.backgroundColor =
+      turn.innerText == '1' ? '#ff6961' : '#77DD77';
+    rightcol.style.backgroundColor =
+      turn.innerText == '1' ? '#77DD77' : '#ff6961';
+    // leftSide.style.color = turn.innerText == '1' ? 'red' : 'green';
+    // rightSide.style.color = turn.innerText == '1' ? 'green' : 'red';
     const id = e.target.id;
     console.log(id);
 
@@ -205,6 +221,7 @@ buttons.addEventListener(
 
 const switchPlayers = () => {
   turn.innerText = turn.innerText == '1' ? '2' : '1';
+
   let temp = leftSide.innerText;
   leftSide.innerText = rightSide.innerText;
   rightSide.innerText = temp;
