@@ -2,10 +2,13 @@
   display: none;
 }
 img {
-  height: 50px;
-  width: 70px;
+  height: 100px;
+  width: 150px;
 }
 #imgC,
 #imgD {
   transform: rotate(180deg);
+}
+#title {
+  padding-left: 60px;
 }
