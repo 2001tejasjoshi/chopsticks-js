@@ -30,7 +30,7 @@ const possibleMoves = (a, b, c, d) => {
     }
   }
   if (c == 0) {
-    // C cannot be attacked
+    // C cannot attack
     removeItemOnce(moves, 'ac');
     removeItemOnce(moves, 'bc');
   }
